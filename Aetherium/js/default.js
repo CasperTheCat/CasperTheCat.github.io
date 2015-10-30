@@ -88,16 +88,22 @@ function printPretty(tDays, tHours, tMins) {
 }
 
 function calcAether() {
-    document.getElementById("boost").innerHTML = "<p>With a boost running the entire time,</p>";
+
     var oField = document.getElementById("oField");
     var oFieldForBoost = document.getElementById("oFieldForBoost");
     var aetherNeeded = document.getElementById("AetherNeeded").value;
     var aetherOnHand = document.getElementById("AetherOnHand").value;
 
-    var aetherDelta = aetherNeeded - aetherOnHand;
-    var timeMinutes = aetherDelta;
-    var timeHours = aetherDelta / 60;
-    var timeDays = aetherDelta / 1440;
+    var timeMinutes = aetherNeeded - aetherOnHand;
+    if (timeMinutes <= 0) {
+        alert("Please enter a valid input");
+        return;
+    }
+    // We have a valid input
+    document.getElementById("boost").innerHTML = "<p>With a boost running the entire time,</p>";
+
+    var timeHours = timeMinutes / 60;
+    var timeDays = timeMinutes / 1440;
 
     // Create our output string
     var messageOut = printPretty(timeDays, timeHours, timeMinutes);
