@@ -34,6 +34,36 @@ function clamp(val, min, max) {
     return (val > max) ? max : (val < min) ? min : val;
 }
 
+
+
+//////////////////////////////////////////////////
+// Future Time
+//
+function futureTime(tMins) {
+
+    // Calculate when this is going to be done
+    var tNow = new Date();
+    var tEst = new Date(tNow.getTime() + (tMins * 60000));
+    //tEst.setTime(tEst.getTime() + tMins * 60);
+
+    var retString = "This will occur ";
+    if (tEst.getDate != tNow.getDate() || tEst.getMonth() != tNow.getMonth() || tEst.getFullYear() != tNow.getFullYear()) {
+        retString += "on " + tEst.getDate() + "/" + (tEst.getMonth() + 1) + "/" + tEst.getFullYear();
+    } else {
+        retString += " today ";
+    }
+
+    retString += " at " +
+        ('0' + tEst.getHours()).slice(-2) +
+        ":" +
+        ('0' + tEst.getMinutes()).slice(-2);
+
+
+    return retString;
+}
+
+
+
 //////////////////////////////////////////////////
 // Returns a formatted string
 //
@@ -76,12 +106,6 @@ function printPretty(tDays, tHours, tMins) {
             retString += " minute\n";
     }
 
-    // Calculate when this is going to be done
-    var tEst = new Date();
-    tEst.setDate(tEst.getDate + f_tDays);
-    tEst.setHours(tEst.getHours() + f_tHours);
-    tEst.setMinutes(tEst.getMinutes() + f_tMins);
-
     //retString += "        This will occur on " + tEst.getDate() + " " + tEst.getHours() + " " + tEst.getMinutes();
     
     return retString;
@@ -115,6 +139,6 @@ function calcAether() {
 
     // Create our output string
     //var messageOut = printPretty(timeDays / 1.25, timeHours / 1.25, timeMinutes / 1.25);
-    //oFieldForBoost.innerHTML = "";
+    oFieldForBoost.innerHTML = "<p>" + futureTime(timeMinutes) + "</p>";
 
 };
