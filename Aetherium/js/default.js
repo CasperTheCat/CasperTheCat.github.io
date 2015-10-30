@@ -26,3 +26,7 @@
 
 	app.start();
 })();
+
+function calcAether() {
+    document.write("TEST\n");
+}
