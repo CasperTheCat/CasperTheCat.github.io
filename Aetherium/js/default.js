@@ -88,20 +88,24 @@ function printPretty(tDays, tHours, tMins) {
 }
 
 function calcAether() {
-
+    var mineRateDelay = [60,50,0,0,0,0,0];
     var oField = document.getElementById("oField");
     var oFieldForBoost = document.getElementById("oFieldForBoost");
     var aetherNeeded = document.getElementById("AetherNeeded").value;
     var aetherOnHand = document.getElementById("AetherOnHand").value;
+    var mineRate = document.getElementById("MineLevel").value;
 
-    var timeMinutes = aetherNeeded - aetherOnHand;
-    if (timeMinutes <= 0) {
+
+    var deltaAether = aetherNeeded - aetherOnHand;
+    if (deltaAether <= 0) {
         alert("Please enter a valid input");
         return;
     }
-    // We have a valid input
-    document.getElementById("boost").innerHTML = "<p>With a boost running the entire time,</p>";
 
+    // We have a valid input
+    document.getElementById("boost").innerHTML = "";
+
+    var timeMinutes = deltaAether / (60 / mineRateDelay[mineRate]);
     var timeHours = timeMinutes / 60;
     var timeDays = timeMinutes / 1440;
 
@@ -110,7 +114,7 @@ function calcAether() {
     oField.innerHTML = "<p>" + messageOut + "</p>";
 
     // Create our output string
-    var messageOut = printPretty(timeDays / 1.25, timeHours / 1.25, timeMinutes / 1.25);
-    oFieldForBoost.innerHTML = "<p>" + messageOut + "</p>";
+    //var messageOut = printPretty(timeDays / 1.25, timeHours / 1.25, timeMinutes / 1.25);
+    //oFieldForBoost.innerHTML = "";
 
 };
