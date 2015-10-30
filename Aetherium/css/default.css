@@ -1,7 +1,7 @@
 ﻿body {
     background-image: url('../images/background.jpg');
-    background-size: 100% auto;
-    /*background-repeat: no-repeat;*/
+    background-size: auto;
+    background-repeat: no-repeat;
     background-color: whitesmoke;
     width: 100%;
     height: 100%;
@@ -16,8 +16,8 @@
 
 .Test {
     background-image: url('../images/backgroundZojja.jpg');
-    background-size: 100% auto;
-    /*background-repeat: no-repeat;*/
+    background-size: auto;
+    background-repeat: no-repeat;
     background-color: whitesmoke;
     width: 100%;
     height: 100%;
