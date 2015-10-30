@@ -97,7 +97,7 @@ function calcAether() {
 
 
     var deltaAether = aetherNeeded - aetherOnHand;
-    if (deltaAether <= 0) {
+    if (deltaAether <= 0 || mineRate < 0 || mineRate > 6) {
         alert("Please enter a valid input");
         return;
     }
@@ -105,7 +105,7 @@ function calcAether() {
     // We have a valid input
     document.getElementById("boost").innerHTML = "";
 
-    var timeMinutes = deltaAether / (60 / mineRateDelay[mineRate]);
+    var timeMinutes = deltaAether / (60 / mineRateDelay[Math.floor(mineRate)]);
     var timeHours = timeMinutes / 60;
     var timeDays = timeMinutes / 1440;
 
