@@ -88,7 +88,7 @@ function printPretty(tDays, tHours, tMins) {
 }
 
 function calcAether() {
-    var mineRateDelay = [60,50,0,0,0,0,0];
+    var mineRateDelay = [60,50,40,0,0,0,0];
     var oField = document.getElementById("oField");
     var oFieldForBoost = document.getElementById("oFieldForBoost");
     var aetherNeeded = document.getElementById("AetherNeeded").value;
