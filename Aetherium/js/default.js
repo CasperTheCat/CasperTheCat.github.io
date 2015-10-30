@@ -1,6 +1,6 @@
 ﻿// For an introduction to the Blank template, see the following documentation:
 // http://go.microsoft.com/fwlink/?LinkId=232509
-(function () {
+/*(function () {
 	"use strict";
 
 	var app = WinJS.Application;
@@ -25,8 +25,86 @@
 	};
 
 	app.start();
-})();
+})();*/
+
+//////////////////////////////////////////////////
+// Clamp
+//
+function clamp(val, min, max) {
+    return (val > max) ? max : (val < min) ? min : val;
+}
+
+//////////////////////////////////////////////////
+// Returns a formatted string
+//
+function printPretty(tDays, tHours, tMins) {
+    var retString = "You will amass the required amount of Aetherium in ";
+
+    // Format Raw values
+    var f_tDays = Math.floor(tDays);
+    var f_tHours = Math.floor(tHours) % 24;
+    var f_tMins = Math.floor(tMins) % 60;
+
+    // Do we need to print days?
+    if (f_tDays >= 1) {
+        retString += f_tDays;
+
+        // Format Text
+        if (f_tDays > 1) retString += " days";
+        else retString += " day";
+
+        if (f_tHours > 0 || f_tMins > 0) retString += ", ";
+    }
+
+    if (f_tHours >= 1) {
+        retString += f_tHours;
+
+        // Format Text
+        if (f_tHours > 1) retString += " hours";
+        else retString += " hour";
+
+        if (f_tMins > 0) retString += " and ";
+    }
+
+    if (f_tMins >= 1) {
+        retString += f_tMins;
+
+        // Format Text
+        if (f_tMins > 1)
+            retString += " minutes\n";
+        else
+            retString += " minute\n";
+    }
+
+    // Calculate when this is going to be done
+    var tEst = new Date();
+    tEst.setDate(tEst.getDate + f_tDays);
+    tEst.setHours(tEst.getHours() + f_tHours);
+    tEst.setMinutes(tEst.getMinutes() + f_tMins);
+
+    //retString += "        This will occur on " + tEst.getDate() + " " + tEst.getHours() + " " + tEst.getMinutes();
+    
+    return retString;
+}
 
 function calcAether() {
-    document.write("TEST\n");
-}
+    document.getElementById("boost").innerHTML = "<p>With a boost running the entire time,</p>";
+    var oField = document.getElementById("oField");
+    var oFieldForBoost = document.getElementById("oFieldForBoost");
+    var aetherNeeded = document.getElementById("AetherNeeded").value;
+    var aetherOnHand = document.getElementById("AetherOnHand").value;
+
+    var aetherDelta = aetherNeeded - aetherOnHand;
+    var timeMinutes = aetherDelta;
+    var timeHours = aetherDelta / 60;
+    var timeDays = aetherDelta / 1440;
+
+    // Create our output string
+    var messageOut = printPretty(timeDays, timeHours, timeMinutes);
+    oField.innerHTML = "<p>" + messageOut + "</p>";
+
+    // Create our output string
+    var messageOut = printPretty(timeDays / 1.25, timeHours / 1.25, timeMinutes / 1.25);
+    oFieldForBoost.innerHTML = "<p>" + messageOut + "</p>";
+
+};
