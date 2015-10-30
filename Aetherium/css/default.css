@@ -28,3 +28,12 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
     /*background-size: 100% auto;*/
 }
+
+#outputField {
+    color: #000000;
+    font-size: 1em;
+}
+
+.wText {
+    color: #000000;
+}

@@ -38,7 +38,7 @@ function clamp(val, min, max) {
 // Returns a formatted string
 //
 function printPretty(tDays, tHours, tMins) {
-    var retString = "You will amass the required of Aetherium in ";
+    var retString = "You will amass the required amount of Aetherium in ";
 
     // Format Raw values
     var f_tDays = Math.floor(tDays);
@@ -53,7 +53,7 @@ function printPretty(tDays, tHours, tMins) {
         if (f_tDays > 1) retString += " days";
         else retString += " day";
 
-        if (f_tHours > 0) retString += ", ";
+        if (f_tHours > 0 || f_tMins > 0) retString += ", ";
     }
 
     if (f_tHours >= 1) {
@@ -88,7 +88,9 @@ function printPretty(tDays, tHours, tMins) {
 }
 
 function calcAether() {
+    document.getElementById("boost").innerHTML = "<p>With a boost running the entire time,</p>";
     var oField = document.getElementById("oField");
+    var oFieldForBoost = document.getElementById("oFieldForBoost");
     var aetherNeeded = document.getElementById("AetherNeeded").value;
     var aetherOnHand = document.getElementById("AetherOnHand").value;
 
@@ -100,5 +102,9 @@ function calcAether() {
     // Create our output string
     var messageOut = printPretty(timeDays, timeHours, timeMinutes);
     oField.innerHTML = "<p>" + messageOut + "</p>";
+
+    // Create our output string
+    var messageOut = printPretty(timeDays / 1.25, timeHours / 1.25, timeMinutes / 1.25);
+    oFieldForBoost.innerHTML = "<p>" + messageOut + "</p>";
 
 };
