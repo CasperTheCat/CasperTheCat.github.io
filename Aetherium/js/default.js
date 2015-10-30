@@ -47,7 +47,7 @@ function futureTime(tMins) {
     //tEst.setTime(tEst.getTime() + tMins * 60);
 
     var retString = "This will occur ";
-    if (tEst.getDate != tNow.getDate() || tEst.getMonth() != tNow.getMonth() || tEst.getFullYear() != tNow.getFullYear()) {
+    if (tEst.getDate() != tNow.getDate() || tEst.getMonth() != tNow.getMonth() || tEst.getFullYear() != tNow.getFullYear()) {
         retString += "on " + tEst.getDate() + "/" + (tEst.getMonth() + 1) + "/" + tEst.getFullYear();
     } else {
         retString += " today ";
