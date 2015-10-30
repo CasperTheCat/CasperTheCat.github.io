@@ -1,6 +1,6 @@
 ﻿// For an introduction to the Blank template, see the following documentation:
 // http://go.microsoft.com/fwlink/?LinkId=232509
-(function () {
+/*(function () {
 	"use strict";
 
 	var app = WinJS.Application;
@@ -25,8 +25,9 @@
 	};
 
 	app.start();
-})();
+})();*/
 
 function calcAether() {
-    document.write("TEST\n");
+    var x = document.getElementById("Output");
+    x.innerHTML = "<p>TEST</p>";
 }

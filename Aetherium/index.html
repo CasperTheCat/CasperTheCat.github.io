@@ -4,22 +4,37 @@
     <meta charset="utf-8" />
     <title>Aetherium</title>
 
-    <!-- WinJS references -->
+    <!--
     <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
     <script src="WinJS/js/base.js"></script>
-    <script src="WinJS/js/ui.js"></script>
+    <script src="WinJS/js/ui.js"></script>-->
 
     <!-- Aetherium references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/default.js"></script>
 </head>
-<body class="win-type-body">
-    <p>Test Site!!!</p>
+<body class="Test">
+    <div>
+        <p>Aetherium Calculator</p>
 
-    <p>Aetherium Calculator</p>
-    <input type="number" name="Aetherium" value="Aetherium"/>
-    <input type="button" onclick="calcAether()" value="Calc"/>
+        <!-- Aetherium Input -->
+        <table>
+            <tr>
+                <td>Aetherium On Hand </td>
+                <td><input id="AetherOnHand" type="number" name="Aetherium" value="Aetherium"/></td>
 
+            </tr>
+
+            <tr>
+                <td>Aetherium Needed</td>
+                <td><input id="AetherNeeded" type="number" name="Aetherium" value="Aetherium"/></td>
+            </tr>
+        </table>
+
+        <input type="button" onclick="calcAether()" value="Calc"/>
+    </div>
+
+    <div id="Output"></div>
 
 </body>
 </html>
