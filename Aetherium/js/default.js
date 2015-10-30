@@ -58,6 +58,9 @@ function futureTime(tMins) {
         ":" +
         ('0' + tEst.getMinutes()).slice(-2);
 
+    // Handle UTC
+    retString += " (" + tEst.getUTCDate() + "/" + (tEst.getUTCMonth() + 1) + "/" + tEst.getUTCFullYear() + " at " + ('0' + tEst.getUTCHours()).slice(-2) + ":" + ('0' + tEst.getUTCMinutes()).slice(-2) + " UTC)";
+
 
     return retString;
 }
