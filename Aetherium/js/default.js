@@ -108,6 +108,9 @@ function printPretty(tDays, tHours, tMins) {
         else
             retString += " minute\n";
     }
+    else if (f_tHours < 1 && f_tDays < 1) {
+        retString += " less than a minute";
+    }
 
     //retString += "        This will occur on " + tEst.getDate() + " " + tEst.getHours() + " " + tEst.getMinutes();
     
