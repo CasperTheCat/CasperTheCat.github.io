@@ -47,7 +47,7 @@ function futureTime(tMins) {
     //tEst.setTime(tEst.getTime() + tMins * 60);
 
     var retString = "This will occur ";
-    if (tEst.getDate != tNow.getDate() || tEst.getMonth() != tNow.getMonth() || tEst.getFullYear() != tNow.getFullYear()) {
+    if (tEst.getDate() != tNow.getDate() || tEst.getMonth() != tNow.getMonth() || tEst.getFullYear() != tNow.getFullYear()) {
         retString += "on " + tEst.getDate() + "/" + (tEst.getMonth() + 1) + "/" + tEst.getFullYear();
     } else {
         retString += " today ";
@@ -107,6 +107,9 @@ function printPretty(tDays, tHours, tMins) {
             retString += " minutes\n";
         else
             retString += " minute\n";
+    }
+    else if (f_tHours < 1 && f_tDays < 1) {
+        retString += " less than a minute";
     }
 
     //retString += "        This will occur on " + tEst.getDate() + " " + tEst.getHours() + " " + tEst.getMinutes();
