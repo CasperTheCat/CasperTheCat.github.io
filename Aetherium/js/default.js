@@ -71,7 +71,7 @@ function futureTime(tMins) {
 // Returns a formatted string
 //
 function printPretty(tDays, tHours, tMins) {
-    var retString = "You will amass the required amount of Aetherium in ";
+    var retString = "";
 
     // Format Raw values
     var f_tDays = Math.floor(tDays);
@@ -108,8 +108,10 @@ function printPretty(tDays, tHours, tMins) {
         else
             retString += " minute\n";
     }
-    else if (f_tHours < 1 && f_tDays < 1) {
+    else if (f_tHours < 1 && f_tDays < 1 && f_tMins >= 0) {
         retString += " less than a minute";
+    } else {
+        retString += " negative time";
     }
 
     //retString += "        This will occur on " + tEst.getDate() + " " + tEst.getHours() + " " + tEst.getMinutes();
@@ -118,33 +120,55 @@ function printPretty(tDays, tHours, tMins) {
 }
 
 function calcAether() {
-    var mineRateDelay = [60,50,40,0,0,0,0];
+    // Aetherium Capacity
+    var aetherCapacity = [500, 1500, 3000, 5000, 10000, 15000, 20000];
+    // Mine Rate
+    var mineRateDelay = [60, 50, 40, 0, 0, 0, 0];
+    // Input Data
     var oField = document.getElementById("oField");
     var oFieldForBoost = document.getElementById("oFieldForBoost");
     var aetherNeeded = document.getElementById("AetherNeeded").value;
     var aetherOnHand = document.getElementById("AetherOnHand").value;
     var mineRate = document.getElementById("MineLevel").value;
+    var capLevel = document.getElementById("CapLevel").value;
 
-
-    var deltaAether = aetherNeeded - aetherOnHand;
-    if (deltaAether <= 0 || mineRate < 0 || mineRate > 6) {
+    // Check Input is Valid
+    if (mineRate < 0 || mineRate > 6 || capLevel < 0 || capLevel > 6) {
         alert("Please enter a valid input");
         return;
     }
 
+    // Check if the guild cap is big enough
+    if (aetherCapacity[capLevel] < aetherNeeded) {
+        alert("The Aetherium Capacity level is too low to hold the required amount of Aetherium");
+        return;
+    }
+
+    // Aetherium to Requirement
+    var deltaAether = aetherNeeded - aetherOnHand;
+
+    // Aetherium To Limit
+    var deltaAetherLimit = aetherCapacity[Math.round(capLevel)] - aetherOnHand;
+
     // We have a valid input
     document.getElementById("boost").innerHTML = "";
 
+    // Calculate Time for Aetherium to hit required level
     var timeMinutes = deltaAether / (60 / mineRateDelay[Math.floor(mineRate)]);
     var timeHours = timeMinutes / 60;
     var timeDays = timeMinutes / 1440;
 
-    // Create our output string
-    var messageOut = printPretty(timeDays, timeHours, timeMinutes);
-    oField.innerHTML = "<p>" + messageOut + "</p>";
+    // Calculate Time for Aetherium to overreach and hit maximum level
+    var timeOverflowMinutes = deltaAetherLimit / (60 / mineRateDelay[Math.floor(mineRate)]);
+    var timeOverflowHours = timeOverflowMinutes / 60;
+    var timeOverflowDays = timeOverflowMinutes / 1440;
 
-    // Create our output string
-    //var messageOut = printPretty(timeDays / 1.25, timeHours / 1.25, timeMinutes / 1.25);
-    oFieldForBoost.innerHTML = "<p>" + futureTime(timeMinutes) + "</p>";
+    // Create our output string for current time
+    var messageOut = "You will amass the required amount of Aetherium in " + printPretty(timeDays, timeHours, timeMinutes);
+    oField.innerHTML = "<p>" + messageOut + "</p><p>" + futureTime(timeMinutes) + "</p>";
+
+    // Calculate overflow
+    var overflowTime = "The store will overflow in " + printPretty(timeOverflowDays, timeOverflowHours, timeOverflowMinutes);
+    oFieldForBoost.innerHTML = "</br><p>" + overflowTime + "</p><p>" + futureTime(timeOverflowMinutes) + "</p>";
 
 };
