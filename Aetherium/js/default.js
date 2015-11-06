@@ -123,7 +123,7 @@ function calcAether() {
     // Aetherium Capacity
     var aetherCapacity = [500, 1500, 3000, 5000, 10000, 15000, 20000];
     // Mine Rate
-    var mineRateDelay = [60, 50, 40, 0, 0, 0, 0];
+    var mineRateDelay = [60, 50, 40, 30, 0, 0, 0];
     // Input Data
     var oField = document.getElementById("oField");
     var oFieldForBoost = document.getElementById("oFieldForBoost");
