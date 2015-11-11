@@ -110,7 +110,8 @@ function printPretty(tDays, tHours, tMins) {
     }
     else if (f_tHours < 1 && f_tDays < 1 && f_tMins >= 0) {
         retString += " less than a minute";
-    } else {
+    }
+    else if (f_tHours < 1 && f_tDays < 1) {
         retString += " negative time";
     }
 
