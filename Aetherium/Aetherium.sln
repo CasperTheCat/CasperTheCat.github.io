@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Aetherium", "Aetherium\Aetherium.jsproj", "{1C4E412E-C54C-47D5-88FF-C1C593F391E1}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Aetherium", "Aetherium.jsproj", "{1C4E412E-C54C-47D5-88FF-C1C593F391E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
