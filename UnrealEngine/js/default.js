@@ -1,0 +1,175 @@
+﻿// For an introduction to the Blank template, see the following documentation:
+// http://go.microsoft.com/fwlink/?LinkId=232509
+/*(function () {
+	"use strict";
+
+	var app = WinJS.Application;
+	var activation = Windows.ApplicationModel.Activation;
+
+	app.onactivated = function (args) {
+		if (args.detail.kind === activation.ActivationKind.launch) {
+			if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
+				// TODO: This application has been newly launched. Initialize your application here.
+			} else {
+				// TODO: This application was suspended and then terminated.
+				// To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
+			}
+			args.setPromise(WinJS.UI.processAll());
+		}
+	};
+
+	app.oncheckpoint = function (args) {
+		// TODO: This application is about to be suspended. Save any state that needs to persist across suspensions here.
+		// You might use the WinJS.Application.sessionState object, which is automatically saved and restored across suspension.
+		// If you need to complete an asynchronous operation before your application is suspended, call args.setPromise().
+	};
+
+	app.start();
+})();*/
+
+//////////////////////////////////////////////////
+// Clamp
+//
+function clamp(val, min, max) {
+    return (val > max) ? max : (val < min) ? min : val;
+}
+
+
+
+//////////////////////////////////////////////////
+// Future Time
+//
+function futureTime(tMins) {
+
+    // Calculate when this is going to be done
+    var tNow = new Date();
+    var tEst = new Date(tNow.getTime() + (tMins * 60000));
+    //tEst.setTime(tEst.getTime() + tMins * 60);
+
+    var retString = "This will occur ";
+    if (tEst.getDate() != tNow.getDate() || tEst.getMonth() != tNow.getMonth() || tEst.getFullYear() != tNow.getFullYear()) {
+        retString += "on " + tEst.getDate() + "/" + (tEst.getMonth() + 1) + "/" + tEst.getFullYear();
+    } else {
+        retString += " today ";
+    }
+
+    retString += " at " +
+        ('0' + tEst.getHours()).slice(-2) +
+        ":" +
+        ('0' + tEst.getMinutes()).slice(-2);
+
+    // Handle UTC
+    retString += " (" + tEst.getUTCDate() + "/" + (tEst.getUTCMonth() + 1) + "/" + tEst.getUTCFullYear() + " at " + ('0' + tEst.getUTCHours()).slice(-2) + ":" + ('0' + tEst.getUTCMinutes()).slice(-2) + " UTC)";
+
+
+    return retString;
+}
+
+
+
+//////////////////////////////////////////////////
+// Returns a formatted string
+//
+function printPretty(tDays, tHours, tMins) {
+    var retString = "";
+
+    // Format Raw values
+    var f_tDays = Math.floor(tDays);
+    var f_tHours = Math.floor(tHours) % 24;
+    var f_tMins = Math.floor(tMins) % 60;
+
+    // Do we need to print days?
+    if (f_tDays >= 1) {
+        retString += f_tDays;
+
+        // Format Text
+        if (f_tDays > 1) retString += " days";
+        else retString += " day";
+
+        if (f_tHours > 0 || f_tMins > 0) retString += ", ";
+    }
+
+    if (f_tHours >= 1) {
+        retString += f_tHours;
+
+        // Format Text
+        if (f_tHours > 1) retString += " hours";
+        else retString += " hour";
+
+        if (f_tMins > 0) retString += " and ";
+    }
+
+    if (f_tMins >= 1) {
+        retString += f_tMins;
+
+        // Format Text
+        if (f_tMins > 1)
+            retString += " minutes\n";
+        else
+            retString += " minute\n";
+    }
+    else if (f_tHours < 1 && f_tDays < 1 && f_tMins >= 0) {
+        retString += " less than a minute";
+    }
+    else if (f_tHours < 1 && f_tDays < 1) {
+        retString += " negative time";
+    }
+
+    //retString += "        This will occur on " + tEst.getDate() + " " + tEst.getHours() + " " + tEst.getMinutes();
+    
+    return retString;
+}
+
+function calcAether() {
+    // Aetherium Capacity
+    var aetherCapacity = [500, 1500, 3000, 5000, 10000, 15000, 20000];
+    // Mine Rate
+    var mineRateDelay = [60, 50, 40, 30, 25, 0, 0];
+    // Input Data
+    var oField = document.getElementById("oField");
+    var oFieldForBoost = document.getElementById("oFieldForBoost");
+    var aetherNeeded = document.getElementById("AetherNeeded").value;
+    var aetherOnHand = document.getElementById("AetherOnHand").value;
+    var mineRate = document.getElementById("MineLevel").value;
+    var capLevel = document.getElementById("CapLevel").value;
+
+    // Check Input is Valid
+    if (mineRate < 0 || mineRate > 6 || capLevel < 0 || capLevel > 6) {
+        alert("Please enter a valid input");
+        return;
+    }
+
+    // Check if the guild cap is big enough
+    if (aetherCapacity[capLevel] < aetherNeeded) {
+        alert("The Aetherium Capacity level is too low to hold the required amount of Aetherium");
+        return;
+    }
+
+    // Aetherium to Requirement
+    var deltaAether = aetherNeeded - aetherOnHand;
+
+    // Aetherium To Limit
+    var deltaAetherLimit = aetherCapacity[Math.round(capLevel)] - aetherOnHand;
+
+    // We have a valid input
+    document.getElementById("boost").innerHTML = "";
+
+    // Calculate Time for Aetherium to hit required level
+    var timeMinutes = deltaAether / (60 / mineRateDelay[Math.floor(mineRate)]);
+    var timeHours = timeMinutes / 60;
+    var timeDays = timeMinutes / 1440;
+
+    // Calculate Time for Aetherium to overreach and hit maximum level
+    var timeOverflowMinutes = deltaAetherLimit / (60 / mineRateDelay[Math.floor(mineRate)]);
+    var timeOverflowHours = timeOverflowMinutes / 60;
+    var timeOverflowDays = timeOverflowMinutes / 1440;
+
+    // Create our output string for current time
+    var messageOut = "You will amass the required amount of Aetherium in " + printPretty(timeDays, timeHours, timeMinutes);
+    oField.innerHTML = "<p>" + messageOut + "</p><p>" + futureTime(timeMinutes) + "</p>";
+
+    // Calculate overflow
+    var overflowTime = "The store will overflow in " + printPretty(timeOverflowDays, timeOverflowHours, timeOverflowMinutes);
+    oFieldForBoost.innerHTML = "</br><p>" + overflowTime + "</p><p>" + futureTime(timeOverflowMinutes) + "</p>";
+
+};
