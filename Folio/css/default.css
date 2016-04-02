@@ -1,0 +1,187 @@
+﻿body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #252525;
+}
+
+/* Navigational Bar */
+#navBar {
+    /* Lock in place! */
+    position: fixed;
+    width: 320px; /* based on 1/6 of a FHD screen, also holds a nice form even on 4K */
+    margin: 0;
+    padding: 0;
+    background-color: #00b7cb;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+    #navBar h1 {
+        font-size: 2.25em;
+    }
+
+    #navBar ul {
+        list-style-type: none;
+    }
+
+        /* Set same for ALL links*/
+        #navBar ul li a:link {
+            color: #000000;
+            font-size: 1.15em;
+            font-size: 1.3em;
+        }
+
+        #navBar ul li a:visited {
+            color: #000000;
+        }
+
+    #navBar #navMenu {
+        margin-top: 50px;
+    }
+
+        /*
+     Edit just the links in navmenu
+    Add transisition for size
+*/
+        #navBar #navMenu li a {
+            text-decoration: none;
+            transition: font-size 0.25s;
+            font-style: italic;
+        }
+
+            /*
+    On hover -> increase size
+*/
+            #navBar #navMenu li a:hover {
+                font-size: 1.6em;
+            }
+
+        /*
+    oblique is a bad idea on chromebook
+*/
+        #navBar #navMenu #current a {
+            font-size: 1.6em;
+            font-style: oblique;
+        }
+
+        #navBar #navMenu hr {
+            transition: width 0.25s, opacity 0.25s;
+            width: 0;
+            opacity: 0;
+        }
+
+        /*
+    Affect Current HR
+*/
+        #navBar #navMenu #current hr {
+            width: 40%;
+            opacity: 1;
+        }
+
+        /* 
+    Cause hover to adjacent HR element
+*/
+        #navBar #navMenu li a:hover + hr {
+            width: 40%;
+            opacity: 1;
+        }
+
+        #navBar #navMenu #current a:hover + hr {
+            width: 40%;
+        }
+
+
+
+/**********************
+            Content
+    ***********************/
+
+/*
+    Space for mid and right floating 
+*/
+.floatingContent {
+    width: auto;
+    margin-left: 320px;
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+    Section stuff
+*/
+section {
+    width: 90%;
+    margin: 30px auto;
+    text-align: justify;
+    padding: 10px 10px 10px 10px;
+        background-color: #c06a00;
+}
+
+    /*
+    Fix Title left margin
+*/
+    section h1 {
+        margin: 20px 5px 20px 5px;
+        text-align:center;
+    }
+
+    /*
+    Fix H2 margins
+*/
+    section h2 {
+        margin: 10px 10px 10px 0px;
+        padding: 0px 0px 10px 0px;
+        text-align: left;
+    }
+
+.titleContent {
+    float: right;
+    margin: 0;
+    padding: 0;
+    background-color: #ff8d00;
+}
+
+/*
+    Section formatting for text
+*/
+.primaryContentLeft {
+    float: left;
+}
+
+.primaryContentRight {
+    float: left;
+}
+
+
+
+/*
+    Section formatting for gallery
+*/
+.galleryContent {
+}
+
+
+/*
+    Article goes inside section ?
+*/
+article {
+    border: solid;
+    border-width:2px;
+    margin: 5px;
+    padding: 0 5px 0 5px;
+}
+
+
+
+
+/* Remove Margin from everything within ul tags */
+ul * {
+    margin: 0;
+}
+
+/* HR */
+hr {
+    width: 70%;
+    border-style: solid;
+    color: #000000;
+}
