@@ -1,0 +1,39 @@
+﻿body {
+    background-image: url('../images/background.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    /*margin: 0px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -ms-scroll-translation: vertical-to-horizontal;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+    /*background-size: 100% auto;*/
+}
+
+
+.Test {
+    background-image: url('../images/backgroundZojja.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    /*margin: 0px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -ms-scroll-translation: vertical-to-horizontal;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+    /*background-size: 100% auto;*/
+}
+
+#outputField {
+    color: #000000;
+    font-size: 1em;
+}
+
+.wText {
+    color: #000000;
+}
