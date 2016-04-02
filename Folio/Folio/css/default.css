@@ -1,9 +1,8 @@
 ﻿body {
     margin: 0 !important;
     padding: 0 !important;
+    background-color: #333333;
 }
-
-
 
 /* Navigational Bar */
 #navBar {
@@ -18,23 +17,13 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+#navBar h1 {
+    font-size:2.25em;
+}
+
 #navBar ul {
     list-style-type: none;
 }
-
-/* Edit just the links */
-#navBar ul li a {
-    font-size:2em;
-
-    text-decoration: none;
-    -webkit-transition: font-size 0.25s;
-    -moz-transition: font-size 0.25s;
-    -ms-transition: font-size 0.25s;
-    -o-transition: font-size 0.25s;
-    transition: font-size 0.25s;
-}
-
-
 
 /* Set same for ALL links*/
 #navBar ul li a:link {
@@ -42,23 +31,62 @@
     font-size:1.15em;
 }
 
-
-#navBar ul li a:hover {
-    font-size:1.6em;
-}
-
 #navBar ul li a:visited {
     color: #000000;
 }
 
-/* Set our current page to not change size (already at full) */
-#navBar #current a{
+/*
+     Edit just the links in navmenu
+    Add transisition for size
+*/
+#navBar #navMenu li a {
+    text-decoration: none;
+    transition: font-size 0.25s;
+    font-style: italic;
+}
+
+/*
+    On hover -> increase size
+*/
+#navBar #navMenu li a:hover {
     font-size:1.6em;
 }
 
-#navBar #current hr {
-    width:10%;
+/*
+    set the size of the current link to fixed
+*/
+#navBar #navMenu #current a{
+    font-size:1.15em;
+    font-style: oblique;
 }
+
+#navBar #navMenu hr {
+    transition: width 0.25s, opacity 0.25s;
+    width: 0;
+    opacity: 0;
+}
+
+/*
+    Affect Current HR
+*/
+#navBar #navMenu #current hr {
+    width:10%;
+    opacity: 1;
+}
+
+/* 
+    Cause hover to adjacent HR element
+*/
+#navBar #navMenu a:hover + hr{
+    width: 50%;
+    opacity: 1;
+}
+
+#navBar #navMenu #current a:hover + hr{
+    width: 50%;
+    opacity: 1;
+}
+
 
 
 
@@ -67,9 +95,7 @@
 .floatingContent {
     width: auto;
     margin-left:320px;
-    background-color: #333333;
-    height:200vh;
-    overflow: auto;
+    overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
 

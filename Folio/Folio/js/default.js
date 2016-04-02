@@ -32,3 +32,22 @@
 
 //    app.start();
 //})();
+
+//window.onload = testFunc;
+
+//function testOver(element) {
+//    var target = $(element.target);
+//    alert("HE");
+//}
+
+//function testFunc() {
+//    alert("hi");
+
+//    var navItems = document.getElementById("navMenu").getElementsByTagName("li");
+//    alert(navItems.length);
+
+//    for (var i = 0; i < navItems.length; i++) // Valid items only please
+//    {
+//        navItems[i].addEventListener("mouseover",testOver);
+//    }
+//}
