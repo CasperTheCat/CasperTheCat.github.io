@@ -1,0 +1,93 @@
+﻿body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+/* Navigational Bar */
+#navBar {
+    /* Lock in place! */
+    position: fixed;
+    width: 320px;
+    margin:0;
+	padding:0;
+    /*left: 0;*/
+    background-color: #325f64;
+    height:100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#navBar ul {
+    list-style-type: none;
+}
+
+/* Edit just the links */
+#navBar ul li a {
+    font-size:2em;
+
+    text-decoration: none;
+    -webkit-transition: font-size 0.25s;
+    -moz-transition: font-size 0.25s;
+    -ms-transition: font-size 0.25s;
+    -o-transition: font-size 0.25s;
+    transition: font-size 0.25s;
+}
+
+
+
+/* Set same for ALL links*/
+#navBar ul li a:link {
+    color: #000000;
+    font-size:1.15em;
+}
+
+
+#navBar ul li a:hover {
+    font-size:1.6em;
+}
+
+#navBar ul li a:visited {
+    color: #000000;
+}
+
+/* Set our current page to not change size (already at full) */
+#navBar #current a{
+    font-size:1.6em;
+}
+
+#navBar #current hr {
+    width:10%;
+}
+
+
+
+
+/* Space for mid and right floating */
+.floatingContent {
+    width: auto;
+    margin-left:320px;
+    background-color: #333333;
+    height:200vh;
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#folio {
+    margin:5px;
+    width:100%;
+    /*background-color: #ff00dc;*/
+}
+
+/* Remove Margin from everything within ul tags */
+ul * {
+    margin:0;
+}
+
+/* HR */
+hr {
+    width:70%;
+    border-style: solid;
+
+    color:#000000;
+}
