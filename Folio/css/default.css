@@ -1,7 +1,7 @@
 ﻿body {
     margin: 0 !important;
     padding: 0 !important;
-    background-color: #252525;
+    background-color: #fff;
 }
 
 /* Navigational Bar */
@@ -9,9 +9,10 @@
     /* Lock in place! */
     position: fixed;
     width: 320px; /* based on 1/6 of a FHD screen, also holds a nice form even on 4K */
+    box-shadow:inset -10px 0px 20px -10px #000;
     margin: 0;
     padding: 0;
-    background-color: #00b7cb;
+    background-color: #03A9F4;
     height: 100vh;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -84,6 +85,7 @@
         #navBar #navMenu li a:hover + hr {
             width: 40%;
             opacity: 1;
+            /*color: #FF3D00;*/
         }
 
         #navBar #navMenu #current a:hover + hr {
@@ -97,24 +99,48 @@
     ***********************/
 
 /*
-    Space for mid and right floating 
+    
 */
 .floatingContent {
     width: auto;
     margin-left: 320px;
     overflow: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
 }
 
 /*
     Section stuff
 */
+
 section {
-    width: 90%;
+    /*width: 90%;
     margin: 30px auto;
+    box-shadow: -10px 10px 20px 0px #000;
     text-align: justify;
     padding: 10px 10px 10px 10px;
-        background-color: #c06a00;
+    background-color: #fff;*/
+    width: 90%;
+    margin: 30px auto;
+}
+
+@media screen and (min-width: 1000px){
+    section {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    section {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    section {
+        width: 50%;
+    }
 }
 
     /*
@@ -134,22 +160,29 @@ section {
         text-align: left;
     }
 
+
 .titleContent {
-    float: right;
+    background-color: #0288D1;
+    width: auto;
+    padding: 10px;
+    margin-top:0px;
+    box-shadow: 00px -10px 20px 10px #000;
+    
+}
+/*.titleContent {
+    box-shadow: none;
     margin: 0;
     padding: 0;
-    background-color: #ff8d00;
-}
+    background-color: #fff;
+}*/
 
 /*
     Section formatting for text
 */
 .primaryContentLeft {
-    float: left;
 }
 
 .primaryContentRight {
-    float: left;
 }
 
 
@@ -164,12 +197,12 @@ section {
 /*
     Article goes inside section ?
 */
-article {
+/*article {
     border: solid;
     border-width:2px;
     margin: 5px;
     padding: 0 5px 0 5px;
-}
+}*/
 
 
 
