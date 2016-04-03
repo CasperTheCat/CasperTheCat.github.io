@@ -133,13 +133,19 @@ section {
 
 @media screen and (min-width: 1500px){
     section {
-        width: 70%;
+        width: 65%;
     }
 }
 
 @media screen and (min-width: 2000px){
     section {
         width: 50%;
+    }
+}
+
+@media screen and (min-width: 2400px){
+    section {
+        width: 35%;
     }
 }
 
@@ -162,11 +168,11 @@ section {
 
 
 .titleContent {
-    background-color: #0288D1;
+    background-color: #4FC3F7;
     width: auto;
     padding: 10px;
     margin-top:0px;
-    box-shadow: 00px -10px 20px 10px #000;
+    box-shadow: 00px -10px 20px 12px #000;
     
 }
 /*.titleContent {
