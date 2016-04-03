@@ -125,27 +125,11 @@ section {
     margin: 30px auto;
 }
 
-@media screen and (min-width: 1000px){
-    section {
-        width: 80%;
-    }
-}
+/**/
 
-@media screen and (min-width: 1500px){
+@media screen and (min-width: 1320px){ /* 1000 * 0.9 = 900; However left margin is shifted by 320*/
     section {
-        width: 65%;
-    }
-}
-
-@media screen and (min-width: 2000px){
-    section {
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 2400px){
-    section {
-        width: 35%;
+        width: 900px;
     }
 }
 
