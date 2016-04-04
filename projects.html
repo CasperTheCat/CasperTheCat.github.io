@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chris Anderson</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- WinJS references -->
+    <!--<link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>-->
+    <!-- Folio references -->
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="js/default.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-62896527-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+
+    <div id="navBar">
+        <ul>
+            <li><h1>Chris Anderson</h1></li>
+            <li><hr /></li>
+        </ul>
+
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a><hr /></li>
+            <li><a href="about.html">About Me</a><hr /></li>
+            <li><a href="portfolio.html">Portfolio</a><hr /></li>
+            <li id="current"><a href="projects.html">Projects</a><hr /></li>
+        </ul>
+    </div>
+
+    <div class="floatingContent">
+        <!-- Formatting Divs -->
+        <section class="titleContent">
+            <h1> Projects </h1>
+        </section>
+
+        <a class="card" href="projects/vermilion.html">
+            <section>
+                <h2>Vermilion</h2>
+                <p>GPU Ray Tracer temporarily build in NVidia's OptiX framework.</p>
+            </section>
+        </a>
+        <a class="card" href="projects/mayavermilion.html">
+            <section>
+                <h2>Vermilion for Maya</h2>
+                <p>Vermilion Render integration into Autodesk Maya</p>
+            </section>
+        </a>
+    </div>
+
+</body>
+</html>
