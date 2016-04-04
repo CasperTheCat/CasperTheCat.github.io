@@ -27,13 +27,8 @@
 
         /* Set same for ALL links*/
         #navBar ul li a:link {
-            color: #000000;
             font-size: 1.15em;
             font-size: 1.3em;
-        }
-
-        #navBar ul li a:visited {
-            color: #000000;
         }
 
     #navBar #navMenu {
@@ -47,7 +42,7 @@
         #navBar #navMenu li a {
             text-decoration: none;
             transition: font-size 0.25s;
-            font-style: italic;
+            font-style: oblique;
         }
 
             /*
@@ -122,7 +117,7 @@ section {
     padding: 10px 10px 10px 10px;
     background-color: #fff;*/
     width: 90%;
-    margin: 30px auto;
+    margin: 50px auto;
 }
 
 /**/
@@ -145,8 +140,8 @@ section {
     Fix H2 margins
 */
     section h2 {
-        margin: 10px 10px 10px 0px;
-        padding: 0px 0px 10px 0px;
+        margin: 10px 10px 0px 0px;
+        padding: 0px 0px 0px 0px;
         text-align: left;
     }
 
@@ -166,16 +161,27 @@ section {
     background-color: #fff;
 }*/
 
-/*
-    Section formatting for text
-*/
-.primaryContentLeft {
+.card {
+    width: 80%;
+    padding: 10px;
+    box-shadow: -5px 5px 20px -4px #000;
+    transition: box-shadow 0.25s, background-color 0.25s;
 }
 
-.primaryContentRight {
+@media screen and (min-width: 1320px){ /* 1000 * 08 = 800; However left margin is shifted by 320*/
+    .card {
+        width: 800px;
+    }
 }
 
+/*.card:hover {
+    box-shadow: -10px 10px 20px -4px #000;
+}*/
 
+.card:hover {
+    box-shadow: -7px 7px 20px 0px #000;
+    background-color:#FF9100;
+}
 
 /*
     Section formatting for gallery
@@ -207,4 +213,15 @@ hr {
     width: 70%;
     border-style: solid;
     color: #000000;
+    text-align: left; /* fix for MS EDGE. Why this is a thing, I don't know */
+}
+
+/* Link's with underline are bad */
+a:visited, a:link {
+    text-decoration:none;
+    color:#000;
+}
+
+.undrln {
+    color: #FF9100 !important;
 }
