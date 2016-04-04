@@ -43,6 +43,7 @@
             text-decoration: none;
             transition: font-size 0.25s;
             font-style: oblique;
+            color:#000;
         }
 
             /*
@@ -140,9 +141,15 @@ section {
     Fix H2 margins
 */
     section h2 {
-        margin: 10px 10px 0px 0px;
+        margin: 30px 10px 0px 0px;
         padding: 0px 0px 0px 0px;
         text-align: left;
+    }
+
+    section h3 {
+        margin: 20px 10px 0px 0px;
+        padding: 0;
+        text-align:left;
     }
 
 
@@ -162,14 +169,20 @@ section {
 }*/
 
 .card {
+    color:#000000 !important;
+}
+
+.card section{
     width: 80%;
     padding: 10px;
     box-shadow: -5px 5px 20px -4px #000;
     transition: box-shadow 0.25s, background-color 0.25s;
 }
 
+
+
 @media screen and (min-width: 1320px){ /* 1000 * 08 = 800; However left margin is shifted by 320*/
-    .card {
+    .card section{
         width: 800px;
     }
 }
@@ -178,7 +191,7 @@ section {
     box-shadow: -10px 10px 20px -4px #000;
 }*/
 
-.card:hover {
+.card section:hover {
     box-shadow: -7px 7px 20px 0px #000;
     background-color:#FF9100;
 }
@@ -219,9 +232,5 @@ hr {
 /* Link's with underline are bad */
 a:visited, a:link {
     text-decoration:none;
-    color:#000;
-}
-
-.undrln {
-    color: #FF9100 !important;
+    color:#FF9100;
 }
