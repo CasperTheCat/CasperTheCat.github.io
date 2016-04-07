@@ -4,3 +4,5 @@
 I'm not a ghost, I'm just really white...
 
 Also, this isn't done yet. Can you tell?
+
+# Daily Commit 101
