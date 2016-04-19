@@ -9,7 +9,7 @@
     /* Lock in place! */
     position: fixed;
     width: 320px; /* based on 1/6 of a FHD screen, also holds a nice form even on 4K */
-    box-shadow:inset -10px 0px 20px -10px #000;
+    box-shadow: inset -10px 0px 20px -10px #000;
     margin: 0;
     padding: 0;
     background-color: #03A9F4;
@@ -43,7 +43,7 @@
             text-decoration: none;
             transition: font-size 0.25s;
             font-style: oblique;
-            color:#000;
+            color: #000;
         }
 
             /*
@@ -103,7 +103,6 @@
     overflow: auto;
     /*font-family: Arial, Helvetica, sans-serif;*/
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-
 }
 
 /*
@@ -123,43 +122,42 @@ section {
 
 /**/
 
-@media screen and (min-width: 1320px){ /* 1000 * 0.9 = 900; However left margin is shifted by 320*/
+@media screen and (min-width: 1320px) { /* 1000 * 0.9 = 900; However left margin is shifted by 320*/
     section {
         width: 900px;
     }
 }
 
-    /*
+/*
     Fix Title left margin
 */
-    section h1 {
-        margin: 20px 5px 20px 5px;
-        text-align:center;
-    }
+section h1 {
+    margin: 20px 5px 20px 5px;
+    text-align: center;
+}
 
-    /*
+/*
     Fix H2 margins
 */
-    section h2 {
-        margin: 30px 10px 0px 0px;
-        padding: 0px 0px 0px 0px;
-        text-align: left;
-    }
+section h2 {
+    margin: 30px 10px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+}
 
-    section h3 {
-        margin: 20px 10px 0px 0px;
-        padding: 0;
-        text-align:left;
-    }
+section h3 {
+    margin: 20px 10px 0px 0px;
+    padding: 0;
+    text-align: left;
+}
 
 
 .titleContent {
     background-color: #4FC3F7;
     width: auto;
     padding: 10px;
-    margin-top:0px;
+    margin-top: 0px;
     box-shadow: 00px -10px 20px 12px #000;
-    
 }
 /*.titleContent {
     box-shadow: none;
@@ -169,20 +167,20 @@ section {
 }*/
 
 .card {
-    color:#000000 !important;
+    color: #000000 !important;
 }
 
-.card section{
-    width: 80%;
-    padding: 10px;
-    box-shadow: -5px 5px 20px -4px #000;
-    transition: box-shadow 0.25s, background-color 0.25s;
-}
+    .card section {
+        width: 80%;
+        padding: 10px;
+        box-shadow: -5px 5px 20px -4px #000;
+        transition: box-shadow 0.25s, background-color 0.25s;
+    }
 
 
 
-@media screen and (min-width: 1320px){ /* 1000 * 08 = 800; However left margin is shifted by 320*/
-    .card section{
+@media screen and (min-width: 1320px) { /* 1000 * 08 = 800; However left margin is shifted by 320*/
+    .card section {
         width: 800px;
     }
 }
@@ -193,7 +191,7 @@ section {
 
 .card section:hover {
     box-shadow: -7px 7px 20px 0px #000;
-    background-color:#FF9100;
+    background-color: #FF9100;
 }
 
 /*
@@ -231,6 +229,57 @@ hr {
 
 /* Link's with underline are bad */
 a:visited, a:link {
-    text-decoration:none;
-    color:#FF9100;
+    text-decoration: none;
+    color: #FF9100;
 }
+
+.fContainer {
+    height:25vh;
+    width: 67%;
+    background-color: pink;
+    float: right;
+}
+
+.fRight {
+    height:25vh;
+    width: 50%;
+    background-color: pink;
+    float: right;
+}
+
+.fLeft {
+    height:25vh;
+    width: 33%;
+    background-color: cyan;
+    float:left;
+}
+
+.fContainer .fLeft {
+    height:25vh;
+    width: 50%;
+    background-color: cyan;
+    float:left;
+}
+
+.fCenterText {
+    height:10%;
+    margin: 50px;
+}
+
+.landTitle {
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+    color: white;
+}
+
+    .landTitle h2 {
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        color: white;
+        text-align: center;
+        font-size: 5em;
+        width: 50%;
+    }
+
