@@ -1,0 +1,129 @@
+﻿body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(30,30,30);
+
+    color: rgb(230,230,230);
+}
+
+a:visited, a:link {
+    text-decoration: none;
+    color: rgb(230,230,230);
+}
+
+a:hover {
+    background-color: black;
+    box-shadow:0 0 20px 10px black;
+}
+
+.landTitle {
+    background-color: rgba(0,0,0,0.75);
+    position: relative;
+    color: rgb(230,230,230);
+    width: 100%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+.landTitle h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+.landTitle h2 {
+    margin: 10px;
+}
+
+
+.landingBack {
+    background: url("../images/title.jpg") no-repeat center center fixed;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+}
+
+.movementBox {
+    font-family: roboto, Helvetica, Arial, sans-serif;
+}
+
+.gallery {
+    width:80%;
+    margin: 10px auto;
+    /* Vendor Column counts */
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    -ms-column-count: 5;
+    -o-column-count: 5;
+    column-count: 5;
+    /* Vendor column gaps */
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    -ms-column-gap: 1em;
+    -o-column-gap: 1em;
+    column-gap: 1em;
+}
+
+
+.galleryItem {
+    background-color: rgba(0,0,0,0.75);
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+.galleryItem p {
+    margin-left: 10px;
+}
+
+.galleryItem img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: auto;
+    float: none;
+}
+
+/* four at clamp */
+@media screen and (max-width: 2000px) {
+    .gallery {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        -ms-column-count: 4;
+        -o-column-count: 4;
+        column-count: 4;
+    }
+}
+
+
+/* Three cols at 00px */
+@media screen and (max-width: 1500px) {
+    .gallery {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        -ms-column-count: 3;
+        -o-column-count: 3;
+        column-count: 3;
+    }
+}
+
+/* Two cols at 600px */
+@media screen and (max-width: 1000px) {
+    .gallery {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        -ms-column-count: 2;
+        -o-column-count: 2;
+        column-count: 2;
+    }
+}
+
+/* Only display 1 image per col when col is 200px */
+/* Occurs at */
+@media screen and (max-width: 500px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -ms-column-count: 1;
+        -o-column-count: 1;
+        column-count: 1;
+    }
+}
