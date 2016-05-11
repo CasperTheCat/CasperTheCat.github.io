@@ -165,7 +165,7 @@ section h3 {
 }*/
 
 .card {
-    color: #000000 !important;
+    color: rgb(230,230,230) !important;
 }
 
     .card section {
@@ -264,40 +264,3 @@ a:visited, a:link {
     margin: 50px;
 }
 
-
-
-.landTitle {
-    position: relative;
-    height: 75vh;
-    overflow: hidden;
-    color: white;
-    width: 100%;
-}
-
-.landTitle img.wide {
-    width:100%;
-}
-
-.landTitle img.tall {
-    height:100%;
-}
-
-    .landTitle h2 {
-        position: absolute;
-        top: 20%;
-        left: 25%;
-        color: white;
-        text-align: center;
-        font-size: 6em;
-        width: 50%;
-    }
-
-    
-.landingBack {
-    background: url("../images/title.jpg")
-}    
-
-.movementBox {
-    font-family: roboto, Helvetica, Arial, sans-serif;
-    text-align: center;
-}
