@@ -56,6 +56,9 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="about.html" />
+    <Content Include="art.html" />
+    <Content Include="artwork.html" />
+    <Content Include="css\title.css" />
     <Content Include="images\title.png" />
     <Content Include="index.html" />
     <Content Include="images\logo.scale-100.png" />
@@ -64,7 +67,9 @@
     <Content Include="images\storelogo.scale-100.png" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
+    <Content Include="projects\artintel.html" />
     <Content Include="projects\mayavermilion.html" />
+    <Content Include="projects\printer.html" />
     <Content Include="projects\vermilion.html" />
     <Content Include="portfolio.html" />
     <Content Include="projects.html" />

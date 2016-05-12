@@ -9,19 +9,21 @@
 a:visited, a:link {
     text-decoration: none;
     color: rgb(230,230,230);
+    border-bottom:3px solid transparent;
+    transition: all 0.33s ease-out;
 }
 
 a:hover {
-    background-color: black;
-    box-shadow:0 0 20px 10px black;
+    border-bottom: 3px solid rgb(230,230,230);
 }
 
 .landTitle {
+    margin-top:20%;
     background-color: rgba(0,0,0,0.75);
     position: relative;
     color: rgb(230,230,230);
     width: 100%;
-    padding: 20px 0 20px 0;
+    padding: 60px 0 60px 0;
     text-align: center;
 }
 
@@ -33,7 +35,6 @@ a:hover {
 .landTitle h2 {
     margin: 10px;
 }
-
 
 .landingBack {
     background: url("../images/title.jpg") no-repeat center center fixed;
@@ -126,4 +127,8 @@ a:hover {
         -o-column-count: 1;
         column-count: 1;
     }
+}
+
+.curr {
+    border-bottom: 3px solid rgb(230,230,230) !important;
 }
