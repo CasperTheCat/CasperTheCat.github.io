@@ -102,6 +102,15 @@
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+.floatingContentGal {
+    width: auto;
+    padding-top:50px;
+    margin-left: 320px;
+    overflow: auto;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
 /*
     Section stuff
 */
@@ -264,3 +273,85 @@ a:visited, a:link {
     margin: 50px;
 }
 
+.gallery {
+    width:90%;
+    margin: 10px auto;
+    /* Vendor column counts */
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    -ms-column-count: 5;
+    -o-column-count: 5;
+    column-count: 5;
+    /* Vendor column gaps */
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    -ms-column-gap: 5px;
+    -o-column-gap: 5px;
+    column-gap: 5px;
+}
+
+
+.galleryItem {
+    background-color: rgba(0,0,0,0.75);
+    display: inline-block;
+    margin: 0 0 5px;
+    width: 100%;
+}
+
+.galleryItem p {
+    margin-left: 10px;
+}
+
+.galleryItem img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: auto;
+    float: none;
+}
+
+/* four at clamp */
+@media screen and (max-width: 2350px) {
+    .gallery {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        -ms-column-count: 4;
+        -o-column-count: 4;
+        column-count: 4;
+    }
+}
+
+
+/* Three cols at 00px */
+@media screen and (max-width: 1850px) {
+    .gallery {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        -ms-column-count: 3;
+        -o-column-count: 3;
+        column-count: 3;
+    }
+}
+
+/* Two cols at 600px */
+@media screen and (max-width: 1350px) {
+    .gallery {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        -ms-column-count: 2;
+        -o-column-count: 2;
+        column-count: 2;
+    }
+}
+
+/* Only display 1 image per col when col is 200px */
+/* Occurs at */
+@media screen and (max-width: 850px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -ms-column-count: 1;
+        -o-column-count: 1;
+        column-count: 1;
+    }
+}
