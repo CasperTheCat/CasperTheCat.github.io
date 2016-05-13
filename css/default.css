@@ -9,7 +9,7 @@
 #navBar {
     /* Lock in place! */
     position: fixed;
-    width: 320px; /* based on 1/6 of a FHD screen, also holds a nice form even on 4K */
+    width: 100%; /* based on 1/6 of a FHD screen, also holds a nice form even on 4K */
     box-shadow: inset -10px 0px 20px -10px #000;
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@
 
     #navBar h1 {
         font-size: 2.25em;
-        color:#969ca0 ;
+        color: #969ca0;
     }
 
     #navBar ul {
@@ -95,17 +95,17 @@
     
 */
 .floatingContent {
-    width: auto;
-    margin-left: 320px;
+    padding-top: 75px;
+    width: 100%;
+    /*margin-left: 320px;*/
     overflow: auto;
     /*font-family: Arial, Helvetica, sans-serif;*/
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .floatingContentGal {
-    width: auto;
-    padding-top:50px;
-    margin-left: 320px;
+    padding-top: 105px;
+    width: 100%;
     overflow: auto;
     /*font-family: Arial, Helvetica, sans-serif;*/
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -173,33 +173,7 @@ section h3 {
     background-color: #fff;
 }*/
 
-.card {
-    color: rgb(230,230,230) !important;
-}
 
-    .card section {
-        width: 80%;
-        padding: 10px;
-        box-shadow: -5px 5px 20px -4px #000;
-        transition: box-shadow 0.25s, background-color 0.25s;
-    }
-
-
-
-@media screen and (min-width: 1320px) { /* 1000 * 08 = 800; However left margin is shifted by 320*/
-    .card section {
-        width: 800px;
-    }
-}
-
-/*.card:hover {
-    box-shadow: -10px 10px 20px -4px #000;
-}*/
-
-.card section:hover {
-    box-shadow: -7px 7px 20px 0px #000;
-    background-color: #FF9100;
-}
 
 /*
     Section formatting for gallery
@@ -241,40 +215,40 @@ a:visited, a:link {
 }
 
 .fContainer {
-    height:25vh;
+    height: 25vh;
     width: 67%;
     background-color: pink;
     float: right;
 }
 
 .fRight {
-    height:25vh;
+    height: 25vh;
     width: 50%;
     background-color: pink;
     float: right;
 }
 
 .fLeft {
-    height:25vh;
+    height: 25vh;
     width: 33%;
     background-color: cyan;
-    float:left;
+    float: left;
 }
 
 .fContainer .fLeft {
-    height:25vh;
+    height: 25vh;
     width: 50%;
     background-color: green;
-    float:left;
+    float: left;
 }
 
 .fCenterText {
-    height:10%;
+    height: 10%;
     margin: 50px;
 }
 
 .gallery {
-    width:90%;
+    width: 90%;
     margin: 10px auto;
     /* Vendor column counts */
     -webkit-column-count: 5;
@@ -298,17 +272,17 @@ a:visited, a:link {
     width: 100%;
 }
 
-.galleryItem p {
-    margin-left: 10px;
-}
+    .galleryItem p {
+        margin-left: 10px;
+    }
 
-.galleryItem img {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    margin: auto;
-    float: none;
-}
+    .galleryItem img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        margin: auto;
+        float: none;
+    }
 
 /* four at clamp */
 @media screen and (max-width: 2350px) {
@@ -354,4 +328,82 @@ a:visited, a:link {
         -o-column-count: 1;
         column-count: 1;
     }
+}
+
+.landTitle {
+    background-color: rgba(0,0,0,0.75);
+    position: fixed;
+    color: rgb(230,230,230);
+    width: 100vw;
+    padding: 25px 0 25px 0;
+    text-align: center;
+}
+
+    .landTitle a:visited, .landTitle a:link {
+        text-decoration: none;
+        color: rgb(230,230,230);
+        border-bottom: 3px solid transparent;
+        transition: all 0.33s ease-out;
+    }
+
+    .landTitle a:hover {
+        border-bottom: 3px solid rgb(230,230,230);
+    }
+
+    .landTitle h1 {
+        font-size: 5em;
+        margin: 0;
+    }
+
+    .landTitle h2 {
+        margin: 10px;
+    }
+
+.movementBox {
+    font-family: roboto, Helvetica, Arial, sans-serif;
+}
+
+    .movementBox a {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+.curr {
+    border-bottom: 3px solid rgb(230,230,230) !important;
+}
+
+.pGalItem {
+    background-color: rgba(0,0,0,0.75);
+    display: inline-block;
+    margin: 0 0 5px;
+    width: 100%;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+    .pGalItem p {
+        margin-left: 10px;
+    }
+
+    .pGalItem h2 {
+        text-align: center;
+    }
+
+    .pGalItem img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        margin: auto;
+        float: none;
+    }
+
+
+
+
+/*.card:hover {
+    box-shadow: -10px 10px 20px -4px #000;
+}*/
+
+.pGalItem:hover {
+    background-color: #FF9100;
+    color: #000;
 }
