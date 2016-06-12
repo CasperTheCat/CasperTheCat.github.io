@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title>Projects - Chris Anderson</title>
 
@@ -12,14 +12,19 @@
     <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>-->
     <!-- Folio references -->
-    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/default.css" rel="stylesheet"/>
     <script src="js/default.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-62896527-1', 'auto');
@@ -28,41 +33,41 @@
 </head>
 <body>
 
-    <div class="landTitle">
-
-        <div class="movementBox">
-            <h2>
-                <a href="about.html">About</a>
-                <a href="artwork.html">Artwork</a>
-                <a class="curr" href="projects.html">Projects</a>
-            </h2>
+<header>
+    <nav>
+        <a class="title" href="index.html"></a>
+        <div>
+            <a class="link" href="about.html">About</a>
+            <a class="link" href="artwork.html">Artwork</a>
+            <a class="clink" href="projects.html">Projects</a>
         </div>
-    </div>
+    </nav>
+</header>
 
-    <div class="floatingContentGal">
-        <!-- Formatting Divs -->
-        <div class="gallery">
-            <a>
-                <section class="pGalItem">
-                    <h2>Nothing here yet</h2>
-                    <p>I am yet to finish any of my big projects!</p>
-                </section>
-            </a>
-        </div>
-
-        <!--<a class="card" href="projects/vermilion.html">
-            <section>
-                <h2>Vermilion</h2>
-                <p>A GPU Ray Tracer I am building in C++ and CUDA.</p>
+<div class="floatingContentGal">
+    <!-- Formatting Divs -->
+    <div class="gallery">
+        <a>
+            <section class="pGalItem">
+                <h2>Nothing here yet</h2>
+                <p>I am yet to finish any of my big projects!</p>
             </section>
         </a>
-        <a class="card" href="projects/mayavermilion.html">
-            <section>
-                <h2>Vermilion for Maya</h2>
-                <p>Vermilion Render integration into Autodesk Maya</p>
-            </section>
-        </a>-->
     </div>
+
+    <!--<a class="card" href="projects/vermilion.html">
+        <section>
+            <h2>Vermilion</h2>
+            <p>A GPU Ray Tracer I am building in C++ and CUDA.</p>
+        </section>
+    </a>
+    <a class="card" href="projects/mayavermilion.html">
+        <section>
+            <h2>Vermilion for Maya</h2>
+            <p>Vermilion Render integration into Autodesk Maya</p>
+        </section>
+    </a>-->
+</div>
 
 </body>
 </html>
