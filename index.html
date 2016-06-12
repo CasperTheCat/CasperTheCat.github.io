@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title>Chris Anderson</title>
 
@@ -12,16 +12,22 @@
     <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>-->
     <!-- Folio references -->
-    <link href="css/title.css" rel="stylesheet" />
-    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+    <link href="css/default.css" rel="stylesheet"/>
+    <script type="text/javascript"
+            src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
     <!--<script type="text/javascript" src="js/default.js"></script>-->
 
     <script>
         (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-62896527-1', 'auto');
@@ -30,78 +36,31 @@
     </script>
 </head>
 <body class="landingBack">
-    <!--
-    <div id="navBar">
-        <ul>
-            <li><h1>Chris Anderson</h1></li>
-            <li><hr /></li>
-        </ul>
-        <ul id="navMenu">
-            <li id="current"><a href="index.html">Home</a><hr /></li>
-            <li><a href="about.html">About Me</a><hr /></li>
-            <li><a href="portfolio.html">Portfolio</a><hr/></li>
-            <li><a href="projects.html">Projects</a><hr /></li>
-        </ul>
-    </div>
-    -->
-    <!--<div class="floatingContent">
 
 
-        <section class="titleContent">
-            <h1>Home</h1>
-        </section>
-
-        <section>
-            <h2>  </h2>
-        </section>
-
-        <section>
-            <div class="fLeft">
-                <h2>Test</h2>
-            </div>
-        </section>
-
-        <section>
-            <div class="fRight">
-                <h2>Test</h2>
-            </div>
-        </section>
-
-
-    </div>
-    -->
-
-    <div class="landTitle">
-        <h1>Chris Anderson</h1>
-
-        <div class="movementBox">
-            <h2>
-                <a href="about.html">About</a> |
-                <a href="artwork.html">Artwork</a> |
-                <a href="projects.html">Projects</a>
-            </h2>
+<header>
+    <nav>
+        <a class="title" href="index.html"></a>
+        <div>
+            <a class="link" href="about.html">About</a>
+            <a class="link" href="artwork.html">Artwork</a>
+            <a class="link" href="projects.html">Projects</a>
         </div>
-    </div>
-    <!--<a href="about.html">
-        <div class="fLeft">
-            About Me
-        </div>
-    </a>
+    </nav>
+</header>
 
-    <div class="fContainer">
-        <a href="portfolio.html">
-            <div class="fLeft">
-                Portfolio
-            </div>
-        </a>
+<section class="para" id="coding">
+    <h1>Programming</h1>
+    <p></p>
+</section>
 
-        <a href="projects.html">
-            <div class="fRight">
-                Projects
-            </div>
-        </a>
+<section class="para" id="games">
+    <h1>Game Design</h1>
+</section>
 
-    </div>-->
+<section class="para" id="art">
+    <h1>Artwork</h1>
+</section>
 
 </body>
 </html>

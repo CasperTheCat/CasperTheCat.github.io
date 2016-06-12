@@ -1,8 +1,24 @@
 ﻿body {
-    margin: 0 !important;
-    padding: 0 !important;
+    /*margin: 0 !important;*/
+    /*padding: 0 !important;*/
     background-color: rgb(30,30,30);
-    color: rgb(230,230,230);
+    color: rgb(200,200,200);
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+body.landingBack {
+    background-image: ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 10px 0;
 }
 
 /* Navigational Bar */
@@ -95,7 +111,7 @@
     
 */
 .floatingContent {
-    padding-top: 75px;
+    padding-top: 30px;
     width: 100%;
     /*margin-left: 320px;*/
     overflow: auto;
@@ -104,7 +120,7 @@
 }
 
 .floatingContentGal {
-    padding-top: 105px;
+    padding-top: 30px;
     width: 100%;
     overflow: auto;
     /*font-family: Arial, Helvetica, sans-serif;*/
@@ -123,22 +139,15 @@ section {
     padding: 10px 10px 10px 10px;
     background-color: #fff;*/
     width: 90%;
+    max-width: 900px;
     margin: 50px auto;
-}
-
-/**/
-
-@media screen and (min-width: 1320px) { /* 1000 * 0.9 = 900; However left margin is shifted by 320*/
-    section {
-        width: 900px;
-    }
 }
 
 /*
     Fix Title left margin
 */
 section h1 {
-    margin: 20px 5px 20px 5px;
+    /*margin: 20px 5px 20px 5px;*/
     text-align: center;
 }
 
@@ -209,11 +218,10 @@ hr {
 }
 
 /* Link's with underline are bad */
-a:visited, a:link {
+a:link, a:visited {
     text-decoration: none;
-    color: #FF9100;
+    color: #fff;
 }
-
 .fContainer {
     height: 25vh;
     width: 67%;
@@ -273,13 +281,16 @@ a:visited, a:link {
 }
 
     .galleryItem p {
+        padding: 10px 5px 15px 5px;
         margin-left: 10px;
+        color: #ff6900;
     }
 
     .galleryItem img {
         max-width: 100%;
+        width:100%;
         height: auto;
-        width: auto;
+        /*width: auto;*/
         margin: auto;
         float: none;
     }
@@ -330,13 +341,74 @@ a:visited, a:link {
     }
 }
 
+body header {
+    background-color: #0069ff;
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    /*transition: background 0.3s linear;*/
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    z-index: 3;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.sLink {
+    color: #ff6900 !important;
+
+}
+
+.link {
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-out;
+}
+
+.link:hover {
+    border-bottom: 3px solid #fff;
+}
+
+.clink {
+    border-bottom: 3px solid #fff;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    margin-left: 45px;
+    width: 25%;
+    height: 76px;
+    background-image: url("../images/title.png");
+    background-size: 150px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
 .landTitle {
+    width: 100%;
     background-color: rgba(0,0,0,0.75);
     position: fixed;
     color: rgb(230,230,230);
-    width: 100vw;
     padding: 25px 0 25px 0;
-    text-align: center;
 }
 
     .landTitle a:visited, .landTitle a:link {
@@ -382,10 +454,13 @@ a:visited, a:link {
 
     .pGalItem p {
         margin-left: 10px;
+        padding: 10px 5px 10px 5px;
     }
 
     .pGalItem h2 {
         text-align: center;
+        margin: 0;
+        padding: 30px 30px 20px 30px;
     }
 
     .pGalItem img {
@@ -404,6 +479,43 @@ a:visited, a:link {
 }*/
 
 .pGalItem:hover {
-    background-color: #FF9100;
+    background-color: #FF6900;
     color: #000;
+}
+
+.para {
+    margin: 0 auto;
+    width:100%;
+    max-width: none;
+    height:auto;
+    min-height: 400px;
+    background-position: left center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#coding {
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../images/devenv.png");
+
+}
+
+#art {
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url("../images/rustyStairs.jpg");
+
+}
+
+#games {
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url("../images/unrealenginelevel.jpg");
+
+}
+
+section h1 {
+    margin: 0;
+    padding: 10px;
 }
