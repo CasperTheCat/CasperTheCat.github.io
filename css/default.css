@@ -283,7 +283,7 @@ a:link, a:visited {
     .galleryItem p {
         padding: 10px 5px 15px 5px;
         margin-left: 10px;
-        color: #ff6900;
+        color: whitesmoke;
     }
 
     .galleryItem img {
@@ -342,7 +342,7 @@ a:link, a:visited {
 }
 
 body header {
-    background-color: #0069ff;
+    background-color: #0055ce;
     background-size: cover;
     background-position: center center;
     height: auto;
