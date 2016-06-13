@@ -498,6 +498,10 @@ nav a {
     background-attachment: fixed;
 }
 
+.para h1{
+    padding-top: 30px;
+}
+
 #coding {
 
     background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../images/devenv.png");
