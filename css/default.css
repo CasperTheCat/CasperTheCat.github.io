@@ -489,7 +489,7 @@ nav a {
     width:100%;
     max-width: none;
     height:auto;
-    min-height: 400px;
+    min-height: 100vh;
     background-position: left center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
