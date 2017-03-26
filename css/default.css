@@ -292,6 +292,21 @@ a:link, a:visited {
         float: none;
     }
 
+.cent {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    margin-left: 10%;
+}
+
+.cent .insection {
+    width: 680px;
+    background-color: rgba(0,0,0,0.75);
+    display: inline-block;
+    margin: auto auto 5px;
+    padding: 20px;
+}
+
 /* four at clamp */
 @media screen and (max-width: 2350px) {
     .gallery {
