@@ -166,6 +166,7 @@ section h3 {
 .landingBack {
     height: 100vh;
     display: flex;
+    display: -webkit-flex;
     flex-flow: column;
 }
 
@@ -375,6 +376,7 @@ nav {
     /*transition: background 0.3s linear;*/
     z-index: 3;
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -398,6 +400,7 @@ footer {
     /*transition: background 0.3s linear;*/
     z-index: 3;
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -570,6 +573,7 @@ footer a{
 .mainIndexSec {
     width: 100%;
     max-width: 100%;
+    display: flex;
     flex: 1 1 auto;
     margin: 0;
 }
@@ -582,7 +586,7 @@ footer a{
 
 #art {
 
-    background-image:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url("../images/rustyStairs.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url("../images/colourTest.png");
 
 }
 
