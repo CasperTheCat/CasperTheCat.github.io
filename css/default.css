@@ -605,13 +605,24 @@ footer a{
 
 section h1 {
     margin: 0;
+    font-size: 1.25em;
     padding: 10px;
 }
 
 .para .contentHider {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+    transition-delay: 0.25s;
 }
 
+    .para .contentHider p {
+        text-align: left;
+    }
+
 .para:hover .contentHider {
-    display: block;
+    opacity: 1;
 }
+
+    /*.para:hover .contentHider p{
+        opacity: 1;
+    }*/
