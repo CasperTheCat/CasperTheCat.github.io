@@ -557,6 +557,8 @@ footer a{
     -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
+    -webkit-transition: width 0.5s; /* Safari */
+    transition: width 0.5s;
 }
 
 .para h1{
@@ -570,24 +572,29 @@ footer a{
         padding: 10px;
     }
 
+.para:hover {
+	width:300%;
+}
+
 .mainIndexSec {
     width: 100%;
     max-width: 100%;
     display: flex;
     flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
     margin: 0;
 }
 
 #coding {
-
     background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../images/devenv.png");
-
 }
 
+/*#coding:hover p:after {
+    CONTENT: "I started programming back in 2006 with BASIC and later scripting in Bethesda's Oblivion. I learned Python, HTML5 and CSS3 in 2012. I learned C#, Java, C++ and CUDA in 2014 while working for Nyriad.";
+}*/
+
 #art {
-
     background-image:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url("../images/colourTest.png");
-
 }
 
 #games {
@@ -598,5 +605,28 @@ footer a{
 
 section h1 {
     margin: 0;
+    font-size: 1.25em;
     padding: 10px;
 }
+
+.para .contentHider {
+    opacity: 0;
+    position:fixed;
+    width: 60%;
+    transition: opacity 0.25s cubic-bezier(1, 0, 0, 1);
+}
+
+    .para .contentHider p {
+        /*text-align: left;*/
+        
+        padding: 0 50px 5px 50px;
+    }
+
+.para:hover .contentHider {
+    opacity: 1;
+
+}
+
+    /*.para:hover .contentHider p{
+        opacity: 1;
+    }*/
