@@ -611,16 +611,20 @@ section h1 {
 
 .para .contentHider {
     opacity: 0;
+    position:fixed;
+    width: 60%;
     transition: opacity 0.25s cubic-bezier(1, 0, 0, 1);
 }
 
     .para .contentHider p {
-        text-align: left;
+        /*text-align: left;*/
+        
         padding: 0 50px 5px 50px;
     }
 
 .para:hover .contentHider {
     opacity: 1;
+
 }
 
     /*.para:hover .contentHider p{
