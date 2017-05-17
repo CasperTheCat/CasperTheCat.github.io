@@ -223,7 +223,7 @@ hr {
 /* Link's with underline are bad */
 a:link, a:visited {
     text-decoration: none;
-    color: #fff;
+    color: #26a;
 }
 .fContainer {
     height: 25vh;
