@@ -223,7 +223,7 @@ hr {
 /* Link's with underline are bad */
 a:link, a:visited {
     text-decoration: none;
-    color: #26a;
+    color: #fff;
 }
 .fContainer {
     height: 25vh;
@@ -281,6 +281,7 @@ a:link, a:visited {
     background-color: rgba(0,0,0,0.75);
     /*display: inline-block;*/ /** Fixed, this is for reference */
     break-inside: avoid-column;
+    page-break-inside: avoid;
     margin: 0 0 5px;
     width: 100%;
 }
@@ -431,7 +432,7 @@ footer a{
 }
 
 .sLink {
-    color: #ff6900 !important;
+    color: #26a !important;
 
 }
 
