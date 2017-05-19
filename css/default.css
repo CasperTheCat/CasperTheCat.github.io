@@ -281,6 +281,7 @@ a:link, a:visited {
     background-color: rgba(0,0,0,0.75);
     /*display: inline-block;*/ /** Fixed, this is for reference */
     break-inside: avoid-column;
+    page-break-inside: avoid;
     margin: 0 0 5px;
     width: 100%;
 }
@@ -311,6 +312,7 @@ a:link, a:visited {
     width: 680px;
     background-color: rgba(0,0,0,0.75);
     break-inside: avoid-column;
+    page-break-inside: avoid;
     margin: auto auto 5px;
     padding: 20px;
 }
@@ -418,6 +420,7 @@ footer a{
 
 .foot {
     break-inside: avoid-column;
+    page-break-inside: avoid;
     position: relative;
     margin-left: 45px;
     width: 25%;
@@ -429,7 +432,7 @@ footer a{
 }
 
 .sLink {
-    color: #ff6900 !important;
+    color: #26a !important;
 
 }
 
@@ -504,6 +507,7 @@ footer a{
 .pGalItem {
     background-color: rgba(0,0,0,0.75);
     break-inside: avoid-column;
+    page-break-inside: avoid;
     margin: 0 0 5px;
     width: 100%;
 
