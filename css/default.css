@@ -638,3 +638,44 @@ section h1 {
     /*.para:hover .contentHider p{
         opacity: 1;
     }*/
+
+    @media screen and (orientation: portrait) {
+        .para {
+            margin: 0 auto;
+            width:100%;
+            max-width: none;
+            height:auto;
+            min-height: 75vh;
+            background-position: left center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .para .contentHider {
+            opacity: 1;
+            position: relative;
+            padding-top: 25px;
+            transform: none;
+            margin: 0 auto;
+        }
+
+        .para .contentHider p {
+            /*text-align: left;*/
+            font-size: 0.75em;
+            padding: 0px;
+        }
+
+            .para:hover {
+                width: 100%;
+            }
+
+        .mainIndexSec {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            margin: 0;
+        }
+    }
