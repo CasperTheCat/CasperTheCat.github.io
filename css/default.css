@@ -140,28 +140,28 @@ section {
     margin: 50px auto;
 }
 
-/*
+    /*
     Fix Title left margin
 */
-section h1 {
-    /*margin: 20px 5px 20px 5px;*/
-    text-align: center;
-}
+    section h1 {
+        /*margin: 20px 5px 20px 5px;*/
+        text-align: center;
+    }
 
-/*
+    /*
     Fix H2 margins
 */
-section h2 {
-    margin: 30px 10px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    text-align: left;
-}
+    section h2 {
+        margin: 30px 10px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        text-align: left;
+    }
 
-section h3 {
-    margin: 20px 10px 0px 0px;
-    padding: 0;
-    text-align: left;
-}
+    section h3 {
+        margin: 20px 10px 0px 0px;
+        padding: 0;
+        text-align: left;
+    }
 
 .landingBack {
     height: 100vh;
@@ -225,6 +225,7 @@ a:link, a:visited {
     text-decoration: none;
     color: #fff;
 }
+
 .fContainer {
     height: 25vh;
     width: 67%;
@@ -295,7 +296,7 @@ a:link, a:visited {
 
     .galleryItem img {
         max-width: 100%;
-        width:100%;
+        width: 100%;
         height: auto;
         /*width: auto;*/
         margin: auto;
@@ -309,14 +310,14 @@ a:link, a:visited {
     margin-left: 10%;
 }
 
-.cent .insection {
-    width: 680px;
-    background-color: rgba(0,0,0,0.75);
-    break-inside: avoid-column;
-    page-break-inside: avoid;
-    margin: auto auto 5px;
-    padding: 20px;
-}
+    .cent .insection {
+        width: 680px;
+        background-color: rgba(0,0,0,0.75);
+        break-inside: avoid-column;
+        page-break-inside: avoid;
+        margin: auto auto 5px;
+        padding: 20px;
+    }
 
 /* four at clamp */
 @media screen and (max-width: 2350px) {
@@ -386,14 +387,14 @@ nav {
     align-items: center;
 }
 
-nav a {
-    z-index: 3;
-    color: white;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 0px;
-    margin-right: 10px;
-}
+    nav a {
+        z-index: 3;
+        color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
 
 footer {
     background-color: #2266AA;
@@ -410,14 +411,14 @@ footer {
     align-items: center;
 }
 
-footer a{
-    z-index: 3;
-    color: white;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 0px;
-    margin-right: 10px;
-}
+    footer a {
+        z-index: 3;
+        color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
 
 .foot {
     break-inside: avoid-column;
@@ -434,7 +435,6 @@ footer a{
 
 .sLink {
     color: #26a !important;
-
 }
 
 .link {
@@ -442,9 +442,9 @@ footer a{
     transition: all 0.3s ease-out;
 }
 
-.link:hover {
-    border-bottom: 3px solid #fff;
-}
+    .link:hover {
+        border-bottom: 3px solid #fff;
+    }
 
 .clink {
     border-bottom: 3px solid #fff;
@@ -511,32 +511,31 @@ footer a{
     page-break-inside: avoid;
     margin: 0 0 5px;
     width: 100%;
-
     transition: background-color 0.25s, color 0.25s;
 }
 
-    .gallery a {
-        color:whitesmoke !important;
-    }
+.gallery a {
+    color: whitesmoke !important;
+}
 
-    .pGalItem p {
-        margin-left: 10px;
-        padding: 10px 5px 10px 5px;
-    }
+.pGalItem p {
+    margin-left: 10px;
+    padding: 10px 5px 10px 5px;
+}
 
-    .pGalItem h2 {
-        text-align: center;
-        margin: 0;
-        padding: 30px 30px 20px 30px;
-    }
+.pGalItem h2 {
+    text-align: center;
+    margin: 0;
+    padding: 30px 30px 20px 30px;
+}
 
-    .pGalItem img {
-        max-width: 100%;
-        height: auto;
-        width: auto;
-        margin: auto;
-        float: none;
-    }
+.pGalItem img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: auto;
+    float: none;
+}
 
 
 
@@ -556,7 +555,6 @@ footer a{
     max-width: none;
     height: auto;
     min-height: 33.3334%;
-
     background-position: left center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -567,20 +565,20 @@ footer a{
     transition: width 0.5s;
 }
 
-.para h1{
-    padding-top: 30px;
-}
+    .para h1 {
+        padding-top: 30px;
+    }
 
-.para p {
+    .para p {
         padding-top: 60px;
         text-align: center;
         margin: 0;
         padding: 10px;
     }
 
-.para:hover {
-	width:300%;
-}
+    .para:hover {
+        width: 300%;
+    }
 
 .mainIndexSec {
     width: 100%;
@@ -592,18 +590,16 @@ footer a{
 }
 
 #coding {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/devenv.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/devenv.png");
 }
 
 
 #art {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url("../images/colourTest.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url("../images/colourTest.png");
 }
 
 #games {
-
-    background-image:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url("../images/unrealenginelevel.jpg");
-
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url("../images/unrealenginelevel.jpg");
 }
 
 section h1 {
@@ -613,8 +609,8 @@ section h1 {
 }
 
 .para h2 {
-    text-align:center;
-    margin-bottom:10px;
+    text-align: center;
+    margin-bottom: 10px;
     font-size: 1.1em;
 }
 
@@ -626,7 +622,6 @@ section h1 {
 
     .para .contentHider p {
         /*text-align: left;*/
-        
         padding: 0 50px 5px 50px;
     }
 
@@ -635,24 +630,24 @@ section h1 {
     transition-timing-function: cubic-bezier(1, 0, 1, 0);
 }
 
-    /*.para:hover .contentHider p{
+/*.para:hover .contentHider p{
         opacity: 1;
     }*/
 
-    @media screen and (orientation: portrait) {
-        .para {
-            margin: 0 auto;
-            width:100%;
-            max-width: none;
-            height:auto;
-            min-height: 75vh;
-            background-position: left center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            background-attachment: fixed;
-        }
+@media screen and (orientation: portrait) {
+    .para {
+        margin: 0 auto;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 75vh;
+        background-position: left center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 
         .para .contentHider {
             opacity: 1;
@@ -662,20 +657,34 @@ section h1 {
             margin: 0 auto;
         }
 
-        .para .contentHider p {
-            /*text-align: left;*/
-            font-size: 0.75em;
-            padding: 0px;
-        }
-
-            .para:hover {
-                width: 100%;
+            .para .contentHider p {
+                /*text-align: left;*/
+                font-size: 1.5vmax;
+                padding: 0px;
             }
 
-        .mainIndexSec {
-            width: 100%;
-            max-width: 100%;
-            display: block;
-            margin: 0;
+
+
+        .para h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.65vmax;
         }
+
+        .para:hover {
+            width: 100%;
+        }
+
+    section h1 {
+        margin: 0;
+        font-size: 2vmax;
+        padding: 10px;
     }
+
+    .mainIndexSec {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin: 0;
+    }
+}
